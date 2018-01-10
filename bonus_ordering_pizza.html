@@ -11,29 +11,66 @@
             color: green;
             font-family: "American Typewriter";
         }
+
+        h2 {
+            color:orange;
+        }
     </style>
 </head>
 <body>
-<header>
-    <h1>Greetings, Welcome to Pizza Planet</h1>
-</header>
-<hr>
+    <header>
+        <h1>Greetings, Welcome to Pizza Planet!</h1>
+    </header>
+    <hr>
 
-<div>
-    <label for="area_code">What is your area code?</label>
-    <input type="number" name="area_code" id="area_code">
-</div>
-<fieldset>
-    <legend>Please indicate order type:</legend>
-    <label for="carry_out">
-    <input type="radio" name="order_type" id="carry_out" value="carry_out">Carry Out
-    </label>
-    <label for="delivery">
-    <input type="radio" name="order_type" id="delivery" value="delivery">Delivery
-    </label>
-</fieldset>
+    <form action="https://hookb.in/vewDeJMz" method="POST">
 
-
-
+        <div>
+            <label for="area_code">What is your area code?</label>
+            <input type="number" name="area_code" id="area_code">
+        </div>
+        <fieldset>
+            <legend>Please indicate order type:</legend>
+            <label for="carry_out">
+            <input type="radio" name="order_type" id="carry_out" value="carry_out">Carry Out
+            </label>
+            <label for="delivery">
+            <input type="radio" name="order_type" id="delivery" value="delivery">Delivery
+            </label>
+        </fieldset>
+        <h2>Toppings</h2>
+        <div>
+            <p>What kind of toppings do you want on your pizza?</p>
+            <label>
+                <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni
+            </label><br>
+            <label>
+                 <input type="checkbox" name="toppings" value="mushrooms"> Mushrooms
+            </label><br>
+            <label>
+                <input type="checkbox" name="toppings" value="olives"> Olives
+            </label><br>
+            <label>
+                <input type="checkbox" name="toppings" value="onions"> Onions
+            </label><br>
+            <label>
+                <input type="checkbox" name="toppings" value="beef"> Beef
+            </label><br>
+        </div>
+        <h2>Pizza Size:</h2>
+        <select name="size">
+            <option value="large">Large</option>
+            <option value="medium">Medium</option>
+            <option value="small">Small</option>
+        </select>
+        <br>
+        <h2>Comments:</h2>
+        <label>
+        <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Please list any specific instructions"></textarea>
+        </label>
+        <div>
+        <button>Submit Order</button>
+        </div>
+    </form>
 </body>
 </html>
