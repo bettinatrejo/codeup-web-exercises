@@ -13,7 +13,8 @@
         }
 
         body{
-            background-color:lightblue;
+            background-image:url("images/stars.jpg");
+            color: white;
         }
     </style>
 
@@ -37,7 +38,7 @@
             </fieldset>
 
             <fieldset>
-                <p>What kind of advertising are you looking for?</p>
+                <p>What kind of advertising are you looking for? (Please select one per form)</p>
                 <label>
                     <input type="radio" name="q1" value="billboard">Billboard
                 </label><br>
@@ -51,7 +52,6 @@
                     <input type="radio" name="q1" id="other_text" value="other">Other
                     <input type="text" name="other_text" placeholder="Write In Other">
                 </label>
-
             </fieldset>
 
             <fieldset>
@@ -59,6 +59,33 @@
             <textarea name="description" id="description" cols="60" rows="20" placeholder="Enter description of what you want in your advertisement" required></textarea>
             <br>
             </fieldset>
+            <h2>Contact Information:</h2>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <br>
+            <div>
+                <label for="number">Phone Number:</label>
+                <input type="number" step="any" name="number" id="number">
+            </div>
+            <br>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" name="subscription" id="subscription" checked>
+                <label for="subscription">Use my email to sign me up for a mailing subscription!</label>
+            </div>
+            <br>
+            <div>
+                <label for="date">Today's Date:</label>
+                <input type="number" step="any" name="date" id="date" placeholder="(e.g. 01-08-18)">
+            </div>
+            <br>
+
             <button style="background-color:green;">Submit</button>
             <button style="background-color:red;" type="reset">Reset</button>
         </form>
