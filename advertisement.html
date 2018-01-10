@@ -16,6 +16,11 @@
             background-image:url("images/stars.jpg");
             color: white;
         }
+
+        header {
+            text-align: center;
+        }
+
     </style>
 
 </head>
@@ -26,14 +31,14 @@
             <p><em><strong>"Where we create advertisements for you!"</strong></em></p>
         </header>
         <hr>
-        <form action="https://hookb.in/vewDeJ3G" method="POST">
+        <form action="https://hookb.in/ZV8ObB4X" method="POST">
             <fieldset>
-            <label for="title">Title:</label>
+            <label for="title">Title*:</label>
             <input type="text" name="title" id="title" autofocus required><br>
             </fieldset>
 
             <fieldset>
-            <label for="price">Price:</label> $
+            <label for="price">Price*:</label> $
             <input type="number" step="any" name="price" id="price" required><br>
             </fieldset>
 
@@ -53,16 +58,20 @@
                     <input type="text" name="other_text" placeholder="Write In Other">
                 </label>
             </fieldset>
-
             <fieldset>
-            <label for="description">Description:</label><br>
+            <label for="description">Description*:</label><br>
             <textarea name="description" id="description" cols="60" rows="20" placeholder="Enter description of what you want in your advertisement" required></textarea>
             <br>
             </fieldset>
             <h2>Contact Information:</h2>
             <div>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name">
+                <label for="date">Today's Date:</label>
+                <input type="date"  name="date" id="date">
+            </div>
+            <br>
+            <div>
+                <label for="name">Name*:</label>
+                <input type="text" name="name" id="name" required>
             </div>
             <br>
             <div>
@@ -71,23 +80,34 @@
             </div>
             <br>
             <div>
-                <label for="email">Email:</label>
+                <label for="email">Email*:</label>
                 <input type="email" name="email" id="email" required>
             </div>
             <br>
             <div>
-                <input type="checkbox" name="subscription" id="subscription" checked>
+                <input type="checkbox" name="subscription" id="subscription" value="true" checked>
                 <label for="subscription">Use my email to sign me up for a mailing subscription!</label>
             </div>
             <br>
             <div>
-                <label for="date">Today's Date:</label>
-                <input type="number" step="any" name="date" id="date" placeholder="(e.g. 01-08-18)">
+                <input type="checkbox" name="texts" id="texts" value="true" checked>
+                <label for="texts">Please text me about upcoming events!</label>
+            </div>
+            <h2>Create an Account:</h2>
+            <div>
+                <label for="username">Username*:</label>
+                <input type="text" name="username" id="username" required>
             </div>
             <br>
-
-            <button style="background-color:green;">Submit</button>
-            <button style="background-color:red;" type="reset">Reset</button>
+            <div>
+                <label for="password">Password*:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <br>
+            <footer>
+                <button style="background-color:green;">Submit</button>
+                <button style="background-color:red;" type="reset">Reset</button>
+            </footer>
         </form>
     </main>
 </body>
