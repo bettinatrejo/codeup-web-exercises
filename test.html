@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--<h2>Login User</h2>-->
+<!--&lt;!&ndash;action attribute on a form is WHERE you're sending the form (URL or a specific file)&ndash;&gt;-->
+<!--&lt;!&ndash;method is the "type" of request. We have GET and POST&ndash;&gt;-->
+<!--&lt;!&ndash;GET method is used for downloading information, we use GET in search forms&ndash;&gt;-->
+<!--&lt;!&ndash;POST method is used for uploading information, we use POST on login forms&ndash;&gt;-->
+<!--<form action="https://hookb.in/v0P7MkgQ" method="GET">-->
+<!--<label for="username">Username:</label>-->
+<!--&lt;!&ndash; "name='username'" is crucial, name is the key for the key value pair (if forgotten there will be no query [means question] string)&ndash;&gt;-->
+<!--<input type="text" name="username" id="username" placeholder="input your username here.">-->
+
+<!--<label for="password">Password:</label>-->
+<!--<input type="password" name="password" id="password" placeholder="input your password here.">-->
+
+<!--&lt;!&ndash;<div>-->
+<!--<label for="bio">Bio:</label><br>-->
+<!--<textarea name="bio" id="bio" cols="30" rows="10" placeholder="Please put in your bio."></textarea>-->
+<!--</div>-->
+<!--&ndash;&gt;-->
+</form>
+
+<h2>Standard Form</h2>
+
+<!-- how to make a login form-->
+
+<form method="POST" action="https://hookb.in/ZB7g5Rg2"></form>
+<div>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username">
+</div>
+<div>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+</div>
+<!--automatically submits/don't have to put type="submit"-->
+<button>Submit</button>
+</form>
+
+
+<h4>Checkbox</h4>
+<input type="checkbox" name="sign_up" value="true" checked>Sign up for a newsletter
+
+<h4>Multiple Checkboxes</h4>
+<!--fieldset groups checkboxes; makes a visual border-->
+<fieldset>
+    <legend>Choose Toppings</legend>
+    <input name="topping" value="pepperoni" type="checkbox">Pepperoni
+    <input name="topping" value="peppers" type="checkbox">Peppers
+    <input name="topping" value="mushrooms" type="checkbox">Mushrooms
+</fieldset>
+
+<h4>Radio Buttons</h4>
+<fieldset>
+    <input type="radio" name="quiz_question_1" value="a">a
+    <input type="radio" name="quiz_question_1" value="b">b
+    <input type="radio" name="quiz_question_1" value="c">c
+</fieldset>
+</body>
+</html>
