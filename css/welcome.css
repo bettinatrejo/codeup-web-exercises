@@ -1,28 +1,86 @@
 /*stick to using classes in css; save id for javascript*/
 
-
-
-.fancy-header {
-    color: purple;
-    font-size: 50px;
-    text-decoration: underline;
-    /*put in a font family to make sure the browser picks up a font*/
-    font-family: "Arial Black";
+a:hover {
+    font-weight: bold;
 }
+
+a:link {
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+a:visited {
+    color: darkred;
+}
+img:hover {
+    opacity: 1.0;
+}
+
+img {
+    opacity: 0.5;
+}
+
 
 header {
     text-align: center;
+    background-image: url("../images/blur-lights.jpeg");
+    background-position: center;
+    background-size: cover;
+    color: black;
 }
+
 
 h2 {
-    color: palevioletred;
+    color: #ff63f4;
+    text-decoration: underline;
+
 }
 
-.test {
+body {
+    background-image:url("../images/roses.jpeg");
+    background-size: cover;
+    font-family: 'Indie Flower', cursive;
+
+
+.table-content {
     background-color: aliceblue;
     font-size: 20px;
     border-color: palevioletred;
 }
+
+td {
+    padding-right: 50px;
+    padding-left:50px;
+    text-align: center;
+}
+
+tr:hover {
+    color: purple;
+}
+
+th {
+    font-weight: bold;
+    color: purple;
+}
+
+ol {
+    list-style-type: disc;
+
+}
+ul {
+    list-style-type: circle;
+
+}
+
+/*.border-image {*/
+    /*border: 100px;*/
+/*}*/
+
+
+
+
+
 
 /*!*putting a comma will do everything listed; will do it all*!*/
 /*main, p {*/
