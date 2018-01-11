@@ -1,0 +1,16 @@
+.fancy-header {
+    color: purple;
+    font-size: 50px;
+    font-family: "Arial Black";
+    text-align: center;
+}
+
+h2 {
+    color: palevioletred;
+}
+
+.test {
+    background-color: aliceblue;
+    font-size: 20px;
+    border-color: palevioletred;
+}
