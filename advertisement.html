@@ -27,6 +27,7 @@
 <body>
     <main>
         <header>
+            <div id="top"></div>
             <h1>Advertisement Aide</h1>
             <p><em><strong>"Where we create advertisements for you!"</strong></em></p>
         </header>
@@ -58,6 +59,12 @@
                     <input type="text" name="other_text" placeholder="Write In Other">
                 </label>
             </fieldset>
+            <label for="marketing">How did you hear about us?</label><br>
+            <select name="marketing[]" id="marketing" multiple>
+                <option value="commercial">Commercial</option>
+                <option value="online">Online</option>
+                <option value="friend">Friend</option>
+            </select>
             <fieldset>
             <label for="description">Description*:</label><br>
             <textarea name="description" id="description" cols="60" rows="20" placeholder="Enter description of what you want in your advertisement" required></textarea>
@@ -87,9 +94,7 @@
             <div>
                 <input type="checkbox" name="subscription" id="subscription" value="true" checked>
                 <label for="subscription">Use my email to sign me up for a mailing subscription!</label>
-            </div>
-            <br>
-            <div>
+                <br>
                 <input type="checkbox" name="texts" id="texts" value="true" checked>
                 <label for="texts">Please text me about upcoming events!</label>
             </div>
@@ -103,10 +108,15 @@
                 <label for="password">Password*:</label>
                 <input type="password" name="password" id="password" required>
             </div>
+            <div>
+                <input type="checkbox" name="log_in" id="log_in" checked>
+                <label for="log_in">Keep me logged in</label>
+            </div>
             <br>
             <footer>
                 <button style="background-color:green;">Submit</button>
                 <button style="background-color:red;" type="reset">Reset</button>
+                <a href="#top">Back to Top</a>
             </footer>
         </form>
     </main>
