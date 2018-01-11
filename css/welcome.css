@@ -1,5 +1,21 @@
 /*stick to using classes in css; save id for javascript*/
 
+.table-content {
+    background-color: aliceblue;
+    font-size: 20px;
+    border-color: palevioletred;
+}
+
+td {
+    padding-right: 50px;
+    padding-left:50px;
+    text-align: center;
+}
+
+tr:hover {
+    color: purple;
+}
+
 a:hover {
     font-weight: bold;
 }
@@ -38,26 +54,18 @@ h2 {
 }
 
 body {
-    background-image:url("../images/roses.jpeg");
+    background-image: url("../images/roses.jpeg");
     background-size: cover;
     font-family: 'Indie Flower', cursive;
-
-
-.table-content {
-    background-color: aliceblue;
-    font-size: 20px;
-    border-color: palevioletred;
 }
 
-td {
-    padding-right: 50px;
-    padding-left:50px;
-    text-align: center;
+.center {
+    width:300px;
+    margin:0 auto;
+    text-align:left;
 }
 
-tr:hover {
-    color: purple;
-}
+
 
 th {
     font-weight: bold;
