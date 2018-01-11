@@ -1,10 +1,12 @@
 /*stick to using classes in css; save id for javascript*/
 
 
+
 .fancy-header {
     color: purple;
     font-size: 50px;
     text-decoration: underline;
+    /*put in a font family to make sure the browser picks up a font*/
     font-family: "Arial Black";
 }
 
@@ -21,3 +23,18 @@ h2 {
     font-size: 20px;
     border-color: palevioletred;
 }
+
+/*!*putting a comma will do everything listed; will do it all*!*/
+/*main, p {*/
+
+/*}*/
+
+/*!*putting a space will do everything that is a paragraph within main*!*/
+/*main p {*/
+
+/*}*/
+
+/*!*putting a space will do everything that is a span within paragraph within main*!*/
+/*main p  span{*/
+
+/*}*/
