@@ -1,0 +1,28 @@
+.background {
+    background: #ff6559;
+    height: 80%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    display: block;
+    color: white;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+header {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    /*border-bottom: 3px solid white;*/
+}
+
+.text-line {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.purchase {
+    border: 2px solid white;
+    position: relative;
+}
