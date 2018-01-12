@@ -1,16 +1,19 @@
 /*stick to using classes in css; save id for javascript*/
+/*classes are more specific than selector [so they will take priority], but not id*/
 
-.table-content {
+table, tr, td, th {
     background-color: aliceblue;
     font-size: 20px;
-    border-color: palevioletred;
-}
-
-td {
-    padding-right: 50px;
-    padding-left:50px;
+    border: 2px palevioletred;
+    border-style: groove;
     text-align: center;
 }
+
+/*tr {*/
+    /*padding-right: 50px;*/
+    /*padding-left:50px;*/
+    /*text-align: center;*/
+/*}*/
 
 tr:hover {
     color: purple;
@@ -60,10 +63,16 @@ body {
 }
 
 .center {
-    width:300px;
+    width:400px;
     margin:0 auto;
     text-align:left;
 }
+
+/* another way to do it
+ul {*/
+    /*list-style-position: inside;*/
+    /*text-align: center;*/
+/*}*/
 
 
 
