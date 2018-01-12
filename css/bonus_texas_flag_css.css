@@ -9,3 +9,10 @@
     width: 200px;
     height: 300px;
 }
+
+/*absolute includes space between itself and the parent container*/
+    /*use top: 0 left: 25px*/
+/*relative means that the space is relative to itself; moves without disturbing*/
+    /*better to set parent container to relative and then .box1 to absolute*/
+/*static is standard*/
+/*position fixed with top and left indicated will make it stay put*/
