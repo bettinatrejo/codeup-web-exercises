@@ -1,14 +1,100 @@
-.box {
-    background-color: blue;
-    width: 400px;
-    height: 600px;
+/*.box {*/
+    /*background-color: blue;*/
+    /*width: 400px;*/
+    /*height: 600px;*/
+/*}*/
+
+/*.box-red {*/
+    /*background-color: red;*/
+    /*width: 200px;*/
+    /*height: 300px;*/
+/*}*/
+
+*{
+    box-sizing:border-box;
 }
 
-.box-red {
-    background-color: red;
-    width: 200px;
-    height: 300px;
+body{
+    margin: 0;
+    padding: 0;
 }
+
+.flag{
+    width: 1440px;
+    height: 900px;
+
+
+}
+
+.blue{
+    height: 100%;
+    width: 33.33%;
+    background-color:navy;
+    position: fixed;
+
+}
+
+.red{
+    position: fixed;
+    height: 50%;
+    width: 66.66%;
+    background-color: red;
+    margin-left: 33.33%;
+    top:50%;
+}
+
+/*star provided by https://css-tricks.com/examples/ShapesOfCSS/*/
+
+#star-five {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: white;
+    width: 0px;
+    height: 0px;
+    border-right: 200px solid transparent;
+    border-bottom: 140px solid white;
+    border-left: 200px solid transparent;
+    transform: rotate(35deg);
+}
+#star-five:before {
+    border-bottom: 160px solid white;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -110px;
+    left: -120px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+#star-five:after {
+    position: absolute;
+    display: block;
+    color: white;
+    top: 3px;
+    left: -200px;
+    width: 0px;
+    height: 0px;
+    border-right: 200px solid transparent;
+    border-bottom: 140px solid white;
+    border-left: 200px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
+
+.star_container{
+    position: fixed;
+    top:117px;
+    left: 2px;
+}
+
+
+
+
+
 
 /*absolute includes space between itself and the parent container*/
     /*use top: 0 left: 25px*/
