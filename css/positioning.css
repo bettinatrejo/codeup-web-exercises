@@ -69,5 +69,8 @@ h1 {
 }
 
 
+/*every div element that is the second child of the parent main (div is within main)*/
 
-
+/*div:nth-child(2) {*/
+    /*background-color: plum;*/
+/*}*/
