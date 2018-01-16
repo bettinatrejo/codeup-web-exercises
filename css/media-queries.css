@@ -1,0 +1,59 @@
+.nav-links {
+    margin: 0;
+    padding-bottom: 45px;
+    list-style-type: none;
+    float: right;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+}
+
+.header-img {
+    clear: both;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.header-img {
+    width: 890px;
+    height: 385px;
+    /*box-sizing: content-box;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sub-section {
+    margin: 20px;
+    box-sizing: border-box;
+    font-style: italic;
+    display: inline;
+}
+
+.main {
+    width:600px;
+    float: left;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+/*h2 {*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+/*}*/
+
+body {
+    position: relative;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+
+
+}
