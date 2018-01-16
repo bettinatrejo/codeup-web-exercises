@@ -74,3 +74,9 @@ h1 {
 /*div:nth-child(2) {*/
     /*background-color: plum;*/
 /*}*/
+
+
+/*!*turning off floating by using clear:both; this makes the list 3x2; selects all odd divs*!*/
+/*div:nth-child(odd) {*/
+    /*clear:both;*/
+/*}*/
