@@ -33,11 +33,11 @@
 }
 
 .column.one-half {
-    width: 50%
+    width: 100%;
 }
 
 .column.one-fourth {
-    width: 25%
+    width: 25%;
 }
 
 .column.one-eighth {
@@ -48,6 +48,10 @@
     .container {
         margin: 0 auto;
         width: 100%;
+    }
+
+    .column.one-half {
+        width: 50%
     }
 
 }
