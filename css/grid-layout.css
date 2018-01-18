@@ -1,7 +1,7 @@
-div>.row .column {
-    background-color: gainsboro;
-    border: 1px solid black;
-}
+/*div>.row .column {*/
+    /*background-color: gainsboro;*/
+    /*border: 1px solid black;*/
+/*}*/
 
 .container {
     margin: 0 auto;
@@ -10,10 +10,9 @@ div>.row .column {
 }
 
 
-
 .row {
     width: 100%;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 .row:after {
