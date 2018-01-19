@@ -1,0 +1,24 @@
+.jumbotron>h1 {
+    font-weight: bold;
+    opacity: 1.0;
+    text-align: center;
+
+}
+
+
+/*look at rbga*/
+.jumbotron {
+    background-image: url("../images/flower-page.jpeg");
+    background-size: cover;
+    border-radius: 25px;
+
+}
+
+
+.transbox {
+    width: 100%;
+    background-color: white;
+    opacity: .8;
+    border-radius: 45px;
+}
+
