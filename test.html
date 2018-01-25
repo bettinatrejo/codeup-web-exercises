@@ -9,61 +9,81 @@
 </head>
 <body>
 
-<!--<h2>Login User</h2>-->
-<!--&lt;!&ndash;action attribute on a form is WHERE you're sending the form (URL or a specific file)&ndash;&gt;-->
-<!--&lt;!&ndash;method is the "type" of request. We have GET and POST&ndash;&gt;-->
-<!--&lt;!&ndash;GET method is used for downloading information, we use GET in search forms&ndash;&gt;-->
-<!--&lt;!&ndash;POST method is used for uploading information, we use POST on login forms&ndash;&gt;-->
-<!--<form action="https://hookb.in/v0P7MkgQ" method="GET">-->
-<!--<label for="username">Username:</label>-->
-<!--&lt;!&ndash; "name='username'" is crucial, name is the key for the key value pair (if forgotten there will be no query [means question] string)&ndash;&gt;-->
-<!--<input type="text" name="username" id="username" placeholder="input your username here.">-->
+<!--&lt;!&ndash;<h2>Login User</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;action attribute on a form is WHERE you're sending the form (URL or a specific file)&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;method is the "type" of request. We have GET and POST&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;GET method is used for downloading information, we use GET in search forms&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;POST method is used for uploading information, we use POST on login forms&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<form action="https://hookb.in/v0P7MkgQ" method="GET">&ndash;&gt;-->
+<!--&lt;!&ndash;<label for="username">Username:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash; "name='username'" is crucial, name is the key for the key value pair (if forgotten there will be no query [means question] string)&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<input type="text" name="username" id="username" placeholder="input your username here.">&ndash;&gt;-->
 
-<!--<label for="password">Password:</label>-->
-<!--<input type="password" name="password" id="password" placeholder="input your password here.">-->
+<!--&lt;!&ndash;<label for="password">Password:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;<input type="password" name="password" id="password" placeholder="input your password here.">&ndash;&gt;-->
 
-<!--&lt;!&ndash;<div>-->
-<!--<label for="bio">Bio:</label><br>-->
-<!--<textarea name="bio" id="bio" cols="30" rows="10" placeholder="Please put in your bio."></textarea>-->
+<!--&lt;!&ndash;&lt;!&ndash;<div>&ndash;&gt;-->
+<!--&lt;!&ndash;<label for="bio">Bio:</label><br>&ndash;&gt;-->
+<!--&lt;!&ndash;<textarea name="bio" id="bio" cols="30" rows="10" placeholder="Please put in your bio."></textarea>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;&ndash;&gt;&ndash;&gt;-->
+<!--</form>-->
+
+<!--<h2>Standard Form</h2>-->
+
+<!--&lt;!&ndash; how to make a login form&ndash;&gt;-->
+
+<!--<form method="POST" action="https://hookb.in/ZB7g5Rg2"></form>-->
+<!--<div>-->
+    <!--<label for="username">Username</label>-->
+    <!--<input type="text" name="username" id="username">-->
 <!--</div>-->
-<!--&ndash;&gt;-->
-</form>
+<!--<div>-->
+    <!--<label for="password">Password</label>-->
+    <!--<input type="password" name="password" id="password">-->
+<!--</div>-->
+<!--&lt;!&ndash;automatically submits/don't have to put type="submit"&ndash;&gt;-->
+<!--<button>Submit</button>-->
+<!--</form>-->
 
-<h2>Standard Form</h2>
 
-<!-- how to make a login form-->
+<!--<h4>Checkbox</h4>-->
+<!--<input type="checkbox" name="sign_up" value="true" checked>Sign up for a newsletter-->
 
-<form method="POST" action="https://hookb.in/ZB7g5Rg2"></form>
-<div>
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username">
+<!--<h4>Multiple Checkboxes</h4>-->
+<!--&lt;!&ndash;fieldset groups checkboxes; makes a visual border&ndash;&gt;-->
+<!--<fieldset>-->
+    <!--<legend>Choose Toppings</legend>-->
+    <!--<input name="topping" value="pepperoni" type="checkbox">Pepperoni-->
+    <!--<input name="topping" value="peppers" type="checkbox">Peppers-->
+    <!--<input name="topping" value="mushrooms" type="checkbox">Mushrooms-->
+<!--</fieldset>-->
+
+<!--<h4>Radio Buttons</h4>-->
+<!--<fieldset>-->
+    <!--<input type="radio" name="quiz_question_1" value="a">a-->
+    <!--<input type="radio" name="quiz_question_1" value="b">b-->
+    <!--<input type="radio" name="quiz_question_1" value="c">c-->
+<!--</fieldset>-->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <p>Consectetur reprehenderit magnam nostrum quod reprehenderit. Inventore repellat eum facilis illum dolor doloribus, eius quibusdam suscipit delectus vitae. Explicabo beatae vitae quos laborum expedita hic, maiores ipsa eaque? Nobis repudiandae!</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <p>Elit rerum asperiores nostrum ipsum sint debitis et, quos harum. Ut reiciendis id dolorem dolorum ad ex in. Illo odit atque dolore corporis vero? Voluptatum cupiditate quisquam perspiciatis obcaecati neque.</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <p>Sit quibusdam dolorum delectus ducimus consequatur ullam cupiditate quia sit, laboriosam distinctio distinctio est blanditiis vitae laudantium dolore? Tempore doloremque aspernatur repellat consectetur sit vero velit possimus suscipit? Odit doloremque?</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <p>Consectetur doloribus dolor quia iste sint! Totam suscipit possimus deserunt adipisci beatae? Mollitia explicabo voluptates hic delectus voluptates commodi necessitatibus perferendis. Rem ipsam itaque illo perspiciatis illo doloribus. Enim iste.</p>
+        </div>
+    </div>
 </div>
-<div>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password">
-</div>
-<!--automatically submits/don't have to put type="submit"-->
-<button>Submit</button>
-</form>
 
 
-<h4>Checkbox</h4>
-<input type="checkbox" name="sign_up" value="true" checked>Sign up for a newsletter
-
-<h4>Multiple Checkboxes</h4>
-<!--fieldset groups checkboxes; makes a visual border-->
-<fieldset>
-    <legend>Choose Toppings</legend>
-    <input name="topping" value="pepperoni" type="checkbox">Pepperoni
-    <input name="topping" value="peppers" type="checkbox">Peppers
-    <input name="topping" value="mushrooms" type="checkbox">Mushrooms
-</fieldset>
-
-<h4>Radio Buttons</h4>
-<fieldset>
-    <input type="radio" name="quiz_question_1" value="a">a
-    <input type="radio" name="quiz_question_1" value="b">b
-    <input type="radio" name="quiz_question_1" value="c">c
-</fieldset>
 </body>
 </html>
