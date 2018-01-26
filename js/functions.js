@@ -9,6 +9,11 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
+
+    // function sayHello(name) {
+    //     return console.log("Hello, " + name)
+    // }
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -17,12 +22,27 @@
  * console.log 'helloMessage' to check your work
  */
 
+
+    // var helloMessage = sayHello("Bettina");
+    // console.log(helloMessage);
+
+
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+    // var myName = "Bettina"
+    // function sayHello(name) {
+    //     return console.log("Hello, " + myName)
+    // }
+
+
+
+
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -46,6 +66,17 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+
+
+// function isTwo(random) {
+//     return random === 2
+// }
+// console.log(random + " " + isTwo(random));
+
+
+
+
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -58,12 +89,29 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+
+// function calculateTip(a, b) {
+//     return (a * b)
+// }
+
+
+
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+// var billTotal = prompt("How much was the bill total? ");
+// var percentageTip = prompt("Percentage you would like to tip: ");
+// function calculateTip(billTotal ,percentageTip) {
+//     return "$" + (billTotal * percentageTip)
+// }
+// console.log(alert(calculateTip(billTotal ,percentageTip)));
+
+
 
 /**
  * TODO:
@@ -79,3 +127,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+// function applyDiscount(price, discount) {
+//     var originalPrice = price;
+//     var discountPercent = discount
+//     var totalDiscount = originalPrice * discountPercent
+//     return originalPrice - totalDiscount
+// }
