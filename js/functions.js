@@ -11,8 +11,9 @@
 
 
     // function sayHello(name) {
-    //     return console.log("Hello, " + name)
+    //     return "Hello, " + name + "!";
     // }
+    // console.log(sayHello("Codeup"));
 
 /**
  * TODO:
@@ -67,13 +68,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  */
 
 
-
+//
 // function isTwo(random) {
 //     return random === 2
 // }
 // console.log(random + " " + isTwo(random));
 
-
+//since we are calling isTwo(random) in the console; it works
 
 
 
@@ -106,8 +107,9 @@ var random = Math.floor((Math.random() * 3) + 1);
 
 // var billTotal = prompt("How much was the bill total? ");
 // var percentageTip = prompt("Percentage you would like to tip: ");
+//
 // function calculateTip(billTotal ,percentageTip) {
-//     return "$" + (billTotal * percentageTip)
+//     return "$" + (billTotal * percentageTip/100)
 // }
 // console.log(alert(calculateTip(billTotal ,percentageTip)));
 
@@ -128,9 +130,9 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-// function applyDiscount(price, discount) {
-//     var originalPrice = price;
-//     var discountPercent = discount
-//     var totalDiscount = originalPrice * discountPercent
-//     return originalPrice - totalDiscount
-// }
+function applyDiscount(price, discount) {
+    var originalPrice = price;
+    var discountPercent = discount
+    var totalDiscount = originalPrice * discountPercent
+    return originalPrice - totalDiscount
+}
