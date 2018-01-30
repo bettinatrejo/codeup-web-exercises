@@ -16,8 +16,44 @@
  * Can you refactor your code to use functions?
  */
 
-
-
+//
+// function isNumeric(input) {
+//     if(isNaN(parseFloat(input))) {
+//         return false;
+//     } else {
+//         return true;
+//     }
+// }
+//
+// var enterNumber = confirm("Would you like to enter a number?");
+// if(enterNumber) {
+//     var number = prompt("Please enter a number.");
+//     number = parseFloat(number);
+//
+//
+// //checks to see if it is a number
+//
+//     if(!isNumeric(number)) {
+//         alert("Please input a number.");
+//     } else {
+//
+//         if (number % 2 == 0) {
+//             alert(number + " is even");
+//         } else {
+//             alert(number + " is odd");
+//         }
+//
+//         alert(number + " plus 100 is " + (100 + number));
+//
+//         if (number < 0) {
+//             alert(number + " is negative.");
+//         } else if (number > 0) {
+//             alert(number + " is positive.");
+//         } else {
+//             alert(number + " is neither positive or negative.");
+//         }
+//     }
+// }
 
 
 
@@ -43,10 +79,39 @@
  */
 
 
+// function analyzeColor(input) {
+//
+//     var message;
+//
+//     if(input === "blue") {
+//         message = "Blue is the color of the sky!";
+//     } else if(input === "red") {
+//         message = "strawberries are red";
+//     } else if(input === "orange") {
+//         message = "Orange is the color of a basketball";
+//     } else if(input === "yellow") {
+//         message = "Yellow is the color of the sun";
+//     } else if(input === "green") {
+//       message = "grass is green";
+//     } else if (input === "indigo") {
+//         message = "indigo is the color of blue-jeans";
+//     } else if (input === "violet") {
+//         message = "violets are violet";
+//    } else {
+//     message = "I don't know anything about the color " + input;
+//     }
+//
+//     return message;
+// }
 
 
 
+// *for the console to show the various messages (not for the exercise above)
 
+// console.log(analyzeColor("red"));
+// console.log(analyzeColor("violet"));
+// console.log(analyzeColor("papayawhip"));
+// console.log(analyzeColor("salmon"));
 
 
 // Don't change the next two lines!
@@ -62,8 +127,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message everytime you refresh the page
  */
 
-
-
+//
+console.log(analyzeColor(randomColor));
 
 
 
@@ -75,7 +140,39 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 
 
+function analyzeColor(input) {
+  var message;
+    switch(input) {
+        case "red":
+            message = "Roses are red";
+            break;
+        case "orange":
+            message = "Orange is the color of a basketball";
+            break;
+        case "yellow":
+           message = "Yellow is the color of the sun";
+            break;
+       case "green":
+            message = "Grass is green";
+            break;
+       case "blue":
+            message = "Blue is the color of the sky.";
+            break;
+        case "violet":
+            message = "Violets are violet";
+            break;
 
+        case "indigo":
+            message = "Blue jeans are indigo";
+            break;
+
+        default:
+            message = "I don't know anything about the color " + input;
+            break;
+      }
+
+    return message;
+}
 
 
 
@@ -87,7 +184,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * function to show it to the user.
  */
 
-
+// var userColorChoice = prompt("Please share your favorite color!");
+// var result = analyzeColor(userColorChoice);
+// console.log(result);
 
 
 
@@ -118,7 +217,31 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
-
+// function calculateTotal(luckyNumber, total) {
+//
+//         if(luckyNumber == 0) {
+//             return total;
+//         } else if(luckyNumber == 1) {
+//             return total - (total * .1)
+//         } else if(luckyNumber == 2) {
+//             return total - (total * .25);
+//         } else if(luckyNumber == 3) {
+//             return total - (total * .35);
+//         } else if(luckyNumber == 4) {
+//             return total - total * .5;
+//         } else if(luckyNumber == 5) {
+//             return total - total * 1;
+//         } else {
+//             return total;
+//         }
+// }
+//
+// console.log(calculateTotal(1, 500));
+// console.log(calculateTotal(2, 200));
+// console.log(calculateTotal(3, 300));
+// console.log(calculateTotal(4, 100));
+// console.log(calculateTotal(5, 1000));
+// console.log(calculateTotal(40, 1200));
 
 
 
@@ -137,3 +260,10 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+//
+//
+// var luckyNumber = Math.floor(Math.random() * 6);
+// var total = prompt("How much was the total amount spent?");
+// alert("Your lucky number is " + luckyNumber);
+// alert("Price before the discount is " + total);
+// alert("after the discount, your total is " + calculateTotal(luckyNumber, total));
