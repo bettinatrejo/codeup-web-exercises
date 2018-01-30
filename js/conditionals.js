@@ -127,8 +127,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message everytime you refresh the page
  */
 
-//
-console.log(analyzeColor(randomColor));
+
+// console.log(analyzeColor(randomColor));
 
 
 
@@ -139,41 +139,41 @@ console.log(analyzeColor(randomColor));
  */
 
 
-
-function analyzeColor(input) {
-  var message;
-    switch(input) {
-        case "red":
-            message = "Roses are red";
-            break;
-        case "orange":
-            message = "Orange is the color of a basketball";
-            break;
-        case "yellow":
-           message = "Yellow is the color of the sun";
-            break;
-       case "green":
-            message = "Grass is green";
-            break;
-       case "blue":
-            message = "Blue is the color of the sky.";
-            break;
-        case "violet":
-            message = "Violets are violet";
-            break;
-
-        case "indigo":
-            message = "Blue jeans are indigo";
-            break;
-
-        default:
-            message = "I don't know anything about the color " + input;
-            break;
-      }
-
-    return message;
-}
-
+//
+// function analyzeColor(input) {
+//   var message;
+//     switch(input) {
+//         case "red":
+//             message = "Roses are red";
+//             break;
+//         case "orange":
+//             message = "Orange is the color of a basketball";
+//             break;
+//         case "yellow":
+//            message = "Yellow is the color of the sun";
+//             break;
+//        case "green":
+//             message = "Grass is green";
+//             break;
+//        case "blue":
+//             message = "Blue is the color of the sky.";
+//             break;
+//         case "violet":
+//             message = "Violets are violet";
+//             break;
+//
+//         case "indigo":
+//             message = "Blue jeans are indigo";
+//             break;
+//
+//         default:
+//             message = "I don't know anything about the color " + input;
+//             break;
+//       }
+//
+//     return message;
+// }
+//
 
 
 
@@ -217,25 +217,25 @@ function analyzeColor(input) {
  * return value.
  */
 
-// function calculateTotal(luckyNumber, total) {
-//
-//         if(luckyNumber == 0) {
-//             return total;
-//         } else if(luckyNumber == 1) {
-//             return total - (total * .1)
-//         } else if(luckyNumber == 2) {
-//             return total - (total * .25);
-//         } else if(luckyNumber == 3) {
-//             return total - (total * .35);
-//         } else if(luckyNumber == 4) {
-//             return total - total * .5;
-//         } else if(luckyNumber == 5) {
-//             return total - total * 1;
-//         } else {
-//             return total;
-//         }
-// }
-//
+function calculateTotal(luckyNumber, total) {
+
+        if(luckyNumber == 0) {
+            return total;
+        } else if(luckyNumber == 1) {
+            return total - (total * .1)
+        } else if(luckyNumber == 2) {
+            return total - (total * .25);
+        } else if(luckyNumber == 3) {
+            return total - (total * .35);
+        } else if(luckyNumber == 4) {
+            return total - total * .5;
+        } else if(luckyNumber == 5) {
+            return total - total * 1;
+        } else {
+            return total;
+        }
+}
+
 // console.log(calculateTotal(1, 500));
 // console.log(calculateTotal(2, 200));
 // console.log(calculateTotal(3, 300));
@@ -259,11 +259,11 @@ function analyzeColor(input) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
-//
-//
-// var luckyNumber = Math.floor(Math.random() * 6);
-// var total = prompt("How much was the total amount spent?");
-// alert("Your lucky number is " + luckyNumber);
-// alert("Price before the discount is " + total);
-// alert("after the discount, your total is " + calculateTotal(luckyNumber, total));
+var luckyNumber = Math.floor(Math.random() * 6);
+
+
+var luckyNumber = Math.floor(Math.random() * 6);
+var total = prompt("How much was the total amount spent?");
+alert("Your lucky number is " + luckyNumber);
+alert("Price before the discount is " + total);
+alert("after the discount, your total is " + calculateTotal(luckyNumber, total));
