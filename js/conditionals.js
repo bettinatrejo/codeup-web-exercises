@@ -216,25 +216,25 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
-function calculateTotal(luckyNumber, total) {
-
-        if(luckyNumber == 0) {
-            return total;
-        } else if(luckyNumber == 1) {
-            return total - (total * .1)
-        } else if(luckyNumber == 2) {
-            return total - (total * .25);
-        } else if(luckyNumber == 3) {
-            return total - (total * .35);
-        } else if(luckyNumber == 4) {
-            return total - total * .5;
-        } else if(luckyNumber == 5) {
-            return total - total * 1;
-        } else {
-            return total;
-        }
-}
+//
+// function calculateTotal(luckyNumber, total) {
+//
+//         if(luckyNumber == 0) {
+//             return total;
+//         } else if(luckyNumber == 1) {
+//             return total - (total * .1)
+//         } else if(luckyNumber == 2) {
+//             return total - (total * .25);
+//         } else if(luckyNumber == 3) {
+//             return total - (total * .35);
+//         } else if(luckyNumber == 4) {
+//             return total - total * .5;
+//         } else if(luckyNumber == 5) {
+//             return total - total * 1;
+//         } else {
+//             return total;
+//         }
+// }
 
 // console.log(calculateTotal(1, 500));
 // console.log(calculateTotal(2, 200));
@@ -259,11 +259,37 @@ function calculateTotal(luckyNumber, total) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
+// var luckyNumber = Math.floor(Math.random() * 6);
+//
+//
+// var luckyNumber = Math.floor(Math.random() * 6);
+// var total = prompt("How much was the total amount spent?");
+// alert("Your lucky number is " + luckyNumber);
+// alert("Price before the discount is " + total);
+// alert("after the discount, your total is " + calculateTotal(luckyNumber, total));
 
 
-var luckyNumber = Math.floor(Math.random() * 6);
-var total = prompt("How much was the total amount spent?");
-alert("Your lucky number is " + luckyNumber);
-alert("Price before the discount is " + total);
-alert("after the discount, your total is " + calculateTotal(luckyNumber, total));
+
+
+
+// function dayOfTheWeekStartsWithT(input) {
+//     input = input.toLowerCase();
+//
+//     if (input === "tuesday" || input === "thursday") {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+
+
+// console.log(dayOfTheWeekStartsWithT("Texas"));
+// console.log(dayOfTheWeekStartsWithT("tomorrow"));
+// console.log(dayOfTheWeekStartsWithT("TUESDAY"));
+// console.log(dayOfTheWeekStartsWithT("Friday"));
+
+function dayOfTheWeekStartsWithT(input) {
+    input = input.toLowerCase();
+    return input == "tuesday" || input == "thursday";
+}

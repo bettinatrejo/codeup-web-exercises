@@ -34,4 +34,19 @@ do {
 //instructor's example:
 
 
+var order;
+console.log("Welcome to the icecream stand");
+console.log("I start my day with " + allCones + " cones.");
+do {
+    order = Math.floor(Math.random() * 5) + 1;
+    if(order <= allCones) {
+      allCones = allCones - order;
+      console.log("Sold " + order + " cones.");
+      } else {
+      console.log("Cannot sell you " + order + " cones. I only have " + allCones);
+      console.log("Next customer, please!");
+        }
 
+        } while(allCones > 0);
+
+    console.log("I sold all the ice cream cones and get to go home!");
