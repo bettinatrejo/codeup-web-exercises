@@ -38,6 +38,9 @@
     var index = planets.indexOf("Earth");
     console.log(index);
 
+    //another way is:
+    // console.log(planets.indexOf("Earth"));
+
     console.log("Reversing the order of the planets array.");
     planets.reverse();
     console.log(planets);
