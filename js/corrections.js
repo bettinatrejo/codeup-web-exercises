@@ -146,7 +146,7 @@ function decrement(input) {
 
 
 //ANSWER
-// function increment(input) {
+// function decrement(input) {
 //     if (isNumeric(input)) {
 //         return --input;
 //         } else {
@@ -223,19 +223,19 @@ function getHighestNumber(input) {
 
 
 //ANSWER
-// function getHighestNumber(arg1, arg2, arg3) {
-//   if (isNumeric(arg1) && isNumeric(arg2) && isNumeric(arg3)) {
-//       if (arg 1 > arg 2 && arg1 > arg3) {
-//           return arg1;
-//       } else if (arg2 > arg1 && arg2 > arg3) {
-//           return arg2;
-//       } else {
-//           return arg3;
-//       }
-//   } else {
-//       return false;
-//   }
-// }
+function getHighestNumber(arg1, arg2, arg3) {
+  if (isNumeric(arg1) && isNumeric(arg2) && isNumeric(arg3)) {
+      if (arg 1 > arg 2 && arg1 > arg3) {
+          return arg1;
+      } else if (arg2 > arg1 && arg2 > arg3) {
+          return arg2;
+      } else {
+          return arg3;
+      }
+  } else {
+      return false;
+  }
+}
 
 
 
