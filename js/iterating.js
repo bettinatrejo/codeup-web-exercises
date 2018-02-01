@@ -131,6 +131,10 @@ console.log(sumAll(numbers));
 // 3. Write a function called max(numbers) that takes in an array of numbers and returns the largest
 
 function max(numbers) {
+    for (var i = 0; i < numbers.length; i++) {
+
+    }
+
 
 }
 
