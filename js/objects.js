@@ -13,6 +13,12 @@
      */
 
 
+    var person =  {};
+    person.firstName = "Bettina";
+    person.lastName = "Trejo";
+
+    console.log(person.firstName);
+    console.log(person.lastName);
 
 
 
@@ -28,10 +34,15 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
+    var person =  {};
+    person.firstName = "Bettina";
+    person.lastName = "Trejo";
+    person.sayHello = function () {
+        return "Hello from " + this.firstName + " " + this.lastName + "!";
+    }
 
 
-
-
+    console.log(person.sayHello());
 
 
     /** TODO:
@@ -48,14 +59,36 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
 
+    // shopper $$ > $200 = 12%
+    // Cameron $180
+    // Ryan $250 (get 12% discount)
+    // George $320 (get 12% discount)
+    // need a line w/ name, amount before discount, the discount (if applicable)
+    // and amount after discount
+    // shoppers array
+    // using a foreach loop for array
 
+    // var discountAmount = (this.amount * .12);
+    // var totalAmount = this.amount - discountAmount;
 
+    shoppers.forEach(function(element, index, array) {
+    var total = 0;
+    var discount = 0;
+        if (element.amount < 200) {
+            console.log("Hey, " + element.name + " you owe $" + element.amount);
+        } else if (element.amount > 200) {
+            discount = element.amount * .12;
+            total = element.amount - discount;
+            console.log("Hey, " + element.name + " you got a discount of $" + discount + " and now owe, $" + total);
+        }
+
+    });
 
 
 
@@ -72,6 +105,49 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+
+        {
+            title: "The Salmon of Doubt",
+            author: {
+                firstName: "Douglas",
+                lastName: "Adams"
+            }
+        },
+
+        {
+            title: "BRAVE",
+            author: {
+                firstName: "Rose",
+                lastName: "McGowan"
+            }
+        },
+
+
+        {
+            title: "Still Me",
+            author: {
+                firstName: "Jojo",
+                lastName: "Moyes"
+            }
+        },
+
+        {
+            title: "Milk and Honey",
+            author: {
+                firstName: "Rupi",
+                lastName: "Kaur"
+            }
+        }
+    ];
+
+
+console.log(books[1].title);
+console.log(books[1].author.firstName);
+console.log(books[1].author.lastName);
+
+
 
     /**
      * TODO:
@@ -98,6 +174,45 @@
      *      ...
      */
 
+    var book = [
+
+        {
+            bookNumber: 0,
+            title: "The Salmon of Doubt",
+            author: {
+                firstName: "Douglas",
+                lastName: "Adams"
+            }
+        },
+
+        {
+            bookNumber: 1,
+            title: "BRAVE",
+            author: {
+                firstName: "Rose",
+                lastName: "McGowan"
+            }
+        },
+
+
+        {
+            bookNumber: 2,
+            title: "Still Me",
+            author: {
+                firstName: "Jojo",
+                lastName: "Moyes"
+            }
+        },
+
+        {
+            bookNumber: 3,
+            title: "Milk and Honey",
+            author: {
+                firstName: "Rupi",
+                lastName: "Kaur"
+            }
+        }
+    ];
 
 
 
@@ -116,6 +231,13 @@
      * - Create a function named `showBookInfo` that accepts a book object and
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
+     *
      */
+
+
+
+
+
+
 
 })();
