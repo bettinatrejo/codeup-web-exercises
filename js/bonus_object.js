@@ -12,6 +12,11 @@
 // getOlder() - will increase age by 1
 // fix() - will set sterile to true if dog sterilized property is false
 // vaccinate() - takes in an argument for the name of the shot and adds a new shot with the current date to the shotRecords array
+
+
+
+
+
 // BONUS 2 (expanding on the books object exercise):
 // Add a property "keywords" that contains an array of possible genres the book may be categorized by
 // Add a boolean property "available" and set it to true
@@ -23,6 +28,14 @@
 // Add a method receive() that...
 // - changes the available property to true
 // - changes the dateAvailable property to the string "now"
+
+
+
+
+
+
+
+
 // BONUS 3 (expanding on the books object exercise):
 // Create an application to take in user input to build the books array of objects.
 //     Allow the user to continue adding books or to finish adding books.
