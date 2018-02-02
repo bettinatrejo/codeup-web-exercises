@@ -174,50 +174,30 @@ console.log(books[1].author.lastName);
      *      ...
      */
 
-    var book = [
-
-        {
-            bookNumber: 0,
-            title: "The Salmon of Doubt",
-            author: {
-                firstName: "Douglas",
-                lastName: "Adams"
-            }
-        },
-
-        {
-            bookNumber: 1,
-            title: "BRAVE",
-            author: {
-                firstName: "Rose",
-                lastName: "McGowan"
-            }
-        },
-
-
-        {
-            bookNumber: 2,
-            title: "Still Me",
-            author: {
-                firstName: "Jojo",
-                lastName: "Moyes"
-            }
-        },
-
-        {
-            bookNumber: 3,
-            title: "Milk and Honey",
-            author: {
-                firstName: "Rupi",
-                lastName: "Kaur"
-            }
-        }
-    ];
 
 
 
+    // for (var i =0; i < books.length; i++) {
+    //     var book = books[i];
+    //     var title = book.title;
+    //     var firstName = book.author.firstName;
+    //     var lastName = book.author.lastName;
+    //     console.log("This is book #: " + (i + 1));
+    //     console.log("The title is: " + title);
+    //     console.log("This book was written by: " + firstName + " " + lastName);
+    //
+    // }
 
 
+
+    //another example:
+    books.forEach(function(book, index) {
+        var output = "";
+        output += "Book # " + (index + 1) +"\n";
+        output += "Title: " + book.title +"\n";
+        output += "Author: " + book.author.firstName + " " + book.author.lastName +"\n";
+         console.log(output);
+    });
 
 
 
@@ -234,10 +214,41 @@ console.log(books[1].author.lastName);
      *
      */
 
+    // var books = [];
+    //
+    // function createBook (title, author) {
+    //     return {
+    //         title: title,
+    //         author: author
+    //     }
+    // }
+    //
+    // var book = createBook("We're All Mad Here", "Callie Newman");
+    //
+    // console.log("This book is called " + book.title + " and the author is " + book.author);
+    //
+    //
+    //
+    // function  showBookInfo ()
 
 
 
 
-
+//
+//
+// var students = [];
+//
+//
+//     function makeStudent(name, id, grade) {
+//         return {
+//             name: name,
+//             id: id,
+//             grade: grade
+//         }
+//     }
+//
+//     var student = makeStudent ("Zach", 1, 100);
+//
+//     console.log(student)
 
 })();
