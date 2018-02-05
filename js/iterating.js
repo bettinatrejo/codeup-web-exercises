@@ -97,85 +97,112 @@
 // // 1. Write a function called average(numbers) that takes in an array of numbers and returns the average
 
 
-var numbers = [1,2,3,4];
+var numbers = [8,7,3,6];
 
-function average(numbers) {
-    var total = 0;
 
-    for (var i = 0; i <= numbers.length -1; i++) {
-       total += numbers[i] / numbers.length;
-    }
 
-        return total;
-}
 
-console.log(average(numbers));
+
+
+// function average(numbers) {
+//     var total = 0;
+//
+//     for (var i = 0; i <= numbers.length -1; i++) {
+//        total += numbers[i] / numbers.length;
+//     }
+//
+//         return total;
+// }
+//
+// console.log(average(numbers));
 
 
 //
 // 2. Write a function called sumAll(numbers) that takes in an array of numbers and returns the sum of adding all of them.
 
-function sumAll(numbers) {
-    var total = 0;
-    for (var i = 0; i <= numbers.length -1; i++) {
-        total += numbers[i];
-    }
-    return total;
-}
-
-console.log(sumAll(numbers));
+// function sumAll(numbers) {
+//     var total = 0;
+//     for (var i = 0; i <= numbers.length -1; i++) {
+//         total += numbers[i];
+//     }
+//     return total;
+// }
+//
+// console.log(sumAll(numbers));
 
 
 
 //
 // 3. Write a function called max(numbers) that takes in an array of numbers and returns the largest
 
-function max(numbers) {
-    for (var i = 0; i < numbers.length; i++) {
-
-    }
-
-
-}
+// function findMax(numbers) {
+//     var max = 0;
+//     for (var i = 0; i < numbers.length; i++) {
+//         if (numbers[i] > max){
+//          max = numbers[i];
+//         }
+//     }
+//     return max;
+// }
+//
+// console.log(findMax(numbers));
 
 //
 // 4. Write a function called min(numbers) that takes in an array of numbers and returns the smallest
 
-function min(numbers) {
-
-}
+// function findMin(numbers) {
+//     var min = Infinity;
+//     for (var i = 0; i < numbers.length; i++) {
+//         if (numbers[i] < min){
+//             min = numbers[i];
+//         }
+//     }
+//     return min;
+// }
+//
+// console.log(findMin(numbers));
 
 //
 // 5. Write a function called reverseArray(array) that takes in an array and returns the elements in reverse order
 
-function reverseArray(array) {
-
-}
-
+// function reverseArray(input) {
+//      return numbers.reverse();
+// }
+// console.log(reverseArray(numbers));
 
 //
 // 6. Write a function called randomElement(array) that takes in an array and returns a random element
 
-function randomElement(array) {
-
-}
-
+// function randomElement(numbers) {
+//     for (var i = 0; i < numbers.length; i++) {
+//         return numbers[Math.floor(Math.random()*numbers.length)];
+//     }
+//
+// }
+// console.log(randomElement(numbers));
 
 //
 // 7. Write a function called upperCaseAll(array) that takes in an array of strings and returns an array of uppercased strings.
 
-function upperCaseAll(array) {
+var myArray = ["a","b","c","d","e"];
 
+function upperCaseAll(myArray) {
+    for (var i = 0; i < myArray.length; i++) {
+        myArray.split(",");
+        return myArray.toUpperCase();
+    }
 }
+
+console.log(upperCaseAll(myArray));
 
 
 //
 // 8. Write a function called getOdds(array) that returns an array of only the odd numbers from an array of numbers.
 
 
-function getOdds(array) {
-
-}
+// function getOdds(array) {
+//
+// }
 
 
 
@@ -183,14 +210,14 @@ function getOdds(array) {
 // 9. Write a function called getEvens(array) that returns only the even numbers from an array of numbers
 
 
-function getEvens(array) {
-
-}
+// function getEvens(array) {
+//
+// }
 
 
 //
 // 10. Write a function called multiplyAll(array) that takes in an array of numbers and returns the result of multiplying all the numbers
 
-function multiplyAll(array) {
-
-}
+// function multiplyAll(array) {
+//
+// }
