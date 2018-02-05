@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geo Practice</title>
+
+
+    <style>
+        #map {
+            width: 500px;
+            height: 500px;
+            background-color: #c4e3f3;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+<div id="map"></div>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIp5Ig5kgI1P0nWd4BDrTHIAzZVvg6mjA"></script>
+<script>
+    "use strict";
+    var mapDisplay = document.getElementById('map');
+
+
+    //these have to be defined
+    var options = {
+        zoom: 18,
+        center: {
+            lat: 29.4260,
+            lng: -98.4861
+        }
+    };
+
+    var map = new google.maps.Map(mapDisplay, options);
+
+
+
+    //geocode!
+
+
+
+    function geoCode(address) {
+
+        var geocoder = new google.maps.Geocoder();
+
+
+        geocoder.geocode({"address": address}, function (results, status) {
+
+
+            if (status == "OK") {
+
+
+                map.setCenter(results[0].geometry.location);
+            } else {
+
+                //
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+        })
+    }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
