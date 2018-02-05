@@ -63,6 +63,16 @@
         }
 
 
+        //Justin's Example for BLUE
+        // for (var i = 0; i < listItems.length; i+=1) {
+        //     if(listItems[i].getAttribute('data-dbid') === '1') {
+        //         listItems[i].style.color = "blue";
+        //     }
+        // }
+
+
+
+
         //Justin's example for grey every other list item
         // for (var i = 0; i < listItems.length; i+=1) {
         //     if(i % 2 === 0) {
@@ -73,7 +83,7 @@
 
         // TODO: Set text color of li with dbid = 1 to blue
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName("sub-paragraph")[0];
+        var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         for(var i = 0; i < subParagraphs.length; i++){
             console.log(subParagraphs[i]);
@@ -81,7 +91,7 @@
         console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs.innerText = "Mission Accomplished!";
+        subParagraphs[0].innerText = "Mission Accomplished!";
 
 
 
