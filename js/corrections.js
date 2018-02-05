@@ -225,7 +225,7 @@ function getHighestNumber(input) {
 //ANSWER
 function getHighestNumber(arg1, arg2, arg3) {
   if (isNumeric(arg1) && isNumeric(arg2) && isNumeric(arg3)) {
-      if (arg 1 > arg 2 && arg1 > arg3) {
+      if (arg1 > arg2 && arg1 > arg3) {
           return arg1;
       } else if (arg2 > arg1 && arg2 > arg3) {
           return arg2;
@@ -328,3 +328,220 @@ function sumOfSquares(a, b) {
 //         return false;
 //     }
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//TEST
+
+//isBoolean
+
+function isBoolean(input) {
+    return typeof input === "boolean";
+}
+
+
+
+
+//isNumeric
+
+function isNumeric(input) {
+    return (!isNaN(parseFloat(input)) && isFinite(input));
+}
+
+
+
+
+//isNegative
+
+
+function isNegative(input) {
+    if (isNumeric(input)) {
+        return input < 0;
+    } else {
+        return false;
+    }
+}
+
+
+
+
+
+
+//isPositive
+
+
+function isPositive(input) {
+    if(isNumeric(input)) {
+        return input > 0;
+    } else {
+        return false;
+    }
+}
+
+// isString
+
+function isString(input) {
+    return typeof input === "string";
+}
+
+
+
+//isArray
+
+function isArray(input) {
+    return Array.isArray(input);
+}
+
+
+
+//increment
+
+function increment(input) {
+    if(isNumeric(input)) {
+       return ++input;
+    } else {
+        return false;
+    }
+}
+
+
+
+//decrement
+
+function decrement(input) {
+    if(isNumeric(input)) {
+        return --input;
+    } else {
+        return false;
+    }
+}
+
+
+//Square
+
+function square(input) {
+    if(isNumeric(input)) {
+        return input * input;
+    } else {
+        return false;
+    }
+}
+
+
+//Ternary Operator
+function square(input){
+    return isNumeric(input) ? input*input : false;
+}
+
+
+
+//uppercase
+
+function upperCase(input) {
+    if(isString(input) && !isNumeric(input)) {
+        return input.toUpperCase();
+    } else {
+        return false;
+    }
+}
+
+
+//palindrome
+
+function palindrome(input) {
+    if(isString(input && !isNumeric(input))) {
+        var lowerVal = input.toLowerCase();
+        var reverseVal = input.split(" ").reverse().join();
+        return input;
+    } else {
+        return false;
+    }
+}
+
+
+
+
+//getHighestNumber
+
+function getHighestNumber(arg1, arg2, arg3) {
+    if (isNumeric(arg1) && isNumeric(arg2) && isNumeric(arg3)) {
+        if(arg1 > arg2 && arg1 > arg3) {
+            return arg1;
+        } else if (arg2 > arg1 && arg2 > arg3) {
+            return arg2;
+        } else {
+            return arg3;
+        }
+    } else{
+        return false;
+    }
+}
+
+
+
+//containsVowels
+
+function containsVowels(input) {
+    if(!isNumeric && typeof input !== "string") {
+        return false;
+    } else{
+        return input.includes("a") || input.includes("e") || input.includes("i") || input.includes("o") || input.includes("u");
+    }
+}
+
+
+
+
+
+//add
+
+
+function add(arg1, arg2) {
+    if (isNumeric(arg1) && isNumeric(arg2)) {
+        return parseFloat(arg1) + parseFloat(arg2);
+    } else {
+        return false;
+    }
+}
+
+
+
+
+//multiply
+
+function multiply(arg1, arg2) {
+    if (isNumeric(arg1) && isNumeric(arg2)) {
+        return parseFloat(arg1) * parseFloat(arg2);
+    } else {
+        return false;
+    }
+}
+
+
+
+
+
+//sumofsquares
+
+function sumofsqares(arg1, arg2) {
+    if (isNumeric(arg1) && isNumeric(arg2)) {
+        return square(arg1) + square(arg2);
+    } else {
+        return false;
+    }
+}
+
+
+
+
+
