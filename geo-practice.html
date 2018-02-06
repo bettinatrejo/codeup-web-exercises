@@ -23,6 +23,17 @@
 
 <div id="map"></div>
 
+<!--&lt;!&ndash;HERE IS THE SEARCH BUTTON&ndash;&gt;-->
+<!--<div>-->
+    <!--<input type="text" id="user_address" name="user_address">-->
+    <!--<label for="user_address">Please enter your address</label>-->
+    <!--<br>-->
+    <!--<button id="search" type="button">Search</button>-->
+<!--</div>-->
+
+
+
+
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIp5Ig5kgI1P0nWd4BDrTHIAzZVvg6mjA"></script>
@@ -37,38 +48,70 @@
         center: {
             lat: 29.4260,
             lng: -98.4861
-        }
+        },
+        mapTypeId: google.maps.MapTypeId.SATELLITE
     };
 
     var map = new google.maps.Map(mapDisplay, options);
 
 
 
-    //geocode!
+    //*****geocode*****
 
 
 
-    function geoCode(address) {
+    // function geoCode(address) {
+    //
+    //     var geocoder = new google.maps.Geocoder();
+    //
+    //
+    //     geocoder.geocode({"address": address}, function (results, status) {
+    //
+    //
+    //         if (status == "OK") {
+    //
+    //
+    //             map.setCenter(results[0].geometry.location);
+    //             map.zoomControl(1);
+    //         } else {
+    //
+    //             //
+    //             alert("Geocoding was not successful - STATUS: " + status);
+    //         }
+    //     })
+    // }
 
-        var geocoder = new google.maps.Geocoder();
+//adding marker
+    var geocoder = new google.maps.Geocoder();
 
 
-        geocoder.geocode({"address": address}, function (results, status) {
+    geocoder.geocode({
+        address: "Codeup"
+    }, function(results, status){
+        if(status === "OK") {
+            var marker = new google.maps.Marker({
+                position: results[0].geometry.location,
+                map: map,
+                draggable: true
+
+            });
+        }
+
+        console.log(results);
+        var infowindow = new google.maps.InfoWindow({
+            content: "Yay, I have a marker!!!"
+        });
+
+// Open the window using our map and marker
+        infowindow.open(map, marker);
+
+    // //    adlistener
+    //     marker.addListener("click", function() {
+    //         infowindow.open(map.marker);
+    //     })
 
 
-            if (status == "OK") {
-
-
-                map.setCenter(results[0].geometry.location);
-            } else {
-
-                //
-                alert("Geocoding was not successful - STATUS: " + status);
-            }
-        })
-    }
-
-
+    });
 
 
 
