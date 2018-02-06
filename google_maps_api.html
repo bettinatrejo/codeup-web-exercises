@@ -36,11 +36,14 @@
             }
         };
 
+
         var map = new google.maps.Map(mapDisplay, options);
 
 
 
         var geocoder = new google.maps.Geocoder();
+
+
 
 
         geocoder.geocode({
@@ -60,25 +63,38 @@
                     position: results[0].geometry.location,
                     map: map,
                     draggable: true,
+                    animation: google.maps.Animation.DROP,
                     icon: icon
 
 
                 });
-                    map.setCenter(results[0].geometry.location);
+                map.setCenter(results[0].geometry.location);
 
             }
 
-            console.log(results);
+
+
+
+
             var infowindow = new google.maps.InfoWindow({
-                content: "<h1>Wings N More</h1>"
+                content: "<h1 style='color:blue;'>Wings N More</h1><br><a href='https://www.google.com/search?tbm=lcl&ei=TvF5WsCMB8OMsQW6n4yYBQ&q=wings+n+more+college+station&oq=wings+n+more+college+station&gs_l=psy-ab.3...5421.7633.0.7840.0.0.0.0.0.0.0.0..0.0....0...1c.1.64.psy-ab..0.0.0....0.MSGAcW4cEPQ#rlfi=hd:;si:13310640434732312001;mv:!1m3!1d21835.776442490103!2d-96.3043989!3d30.616036899999997!2m3!1f0!2f0!3f0!3m2!1i499!2i1221!4f13.1'>Google Maps</a>"
             });
+
+
+
+
+//            do a for each loop
+
+
 
 // Open the window using our map and marker
 //             infowindow.open(map, marker);
             marker.addListener('click', function() {
                 infowindow.open(geocoder, marker);
             });
+
         });
+
     </script>
 </body>
 </html>
