@@ -77,6 +77,10 @@
     // var discountAmount = (this.amount * .12);
     // var totalAmount = this.amount - discountAmount;
 
+
+
+
+
     shoppers.forEach(function(element, index, array) {
     var total = 0;
     var discount = 0;

@@ -188,8 +188,8 @@ var myArray = ["a","b","c","d","e"];
 
 function upperCaseAll(myArray) {
     for (var i = 0; i < myArray.length; i++) {
-        myArray.split(",");
-        return myArray.toUpperCase();
+       var newArray = myArray.join(", ");
+        return newArray.toUpperCase().split("|");
     }
 }
 
@@ -200,10 +200,19 @@ console.log(upperCaseAll(myArray));
 // 8. Write a function called getOdds(array) that returns an array of only the odd numbers from an array of numbers.
 
 
-// function getOdds(array) {
-//
-// }
+function getOdds(numbers) {
+    var odd = 0;
+    for ( var i = 0; i < numbers.length; i++) {
+        if (numbers % 2 == 1) {
+            return odd = numbers[i];
+        } else {
+            return false;
+        }
+    }
 
+}
+
+// console.log(getOdds(numbers));
 
 
 //
