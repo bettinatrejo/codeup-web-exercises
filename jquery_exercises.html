@@ -48,20 +48,50 @@
     // alert(content);
 
 
-        var contents = $(".show-all").text();
-        alert(contents);
+    //     var contents = $(".show-all").text();
+    //     alert(contents);
+    //
+    //
+    //
+    // $("#blue").css('color', 'blue');
+    // $("#red").css('color', 'red');
+    // $("#green").css('color', 'green');
+    // $("#purple").css('color', 'purple');
+    // $(".codeup").css('border', '1px solid red');
+    // $("li").css("font-size", "20px");
+    //
+    //
+    // $(".codeup, li, h1").css("background-color", "pink");
 
 
+        $('h1').click(function() {
+            $(this).css("background-color", "blue");
+        });
 
-    $("#blue").css('color', 'blue');
-    $("#red").css('color', 'red');
-    $("#green").css('color', 'green');
-    $("#purple").css('color', 'purple');
-    $(".codeup").css('border', '1px solid red');
-    $("li").css("font-size", "20px");
+        $('p').dblclick(function() {
+            $(this).css("font-size", "18px");
+        });
 
+        $("body").hover(
+            function() {
+                $(this).css("background-color", "pink");
+            },
+            function() {
+                $(this).css("background-color", "white");
+            }
 
-    $(".codeup, li, h1").css("background-color", "pink");
+        );
+
+        $("li").hover(
+            function() {
+                $(this).css("color", "red");
+            },
+            function() {
+                $(this).css("color", "black");
+            }
+
+        );
+
 
 
 
