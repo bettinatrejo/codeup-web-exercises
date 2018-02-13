@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FAQs about national parks</title>
+
+
+    <style>
+
+       .invisible {
+            display: none;
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+<main>
+    <div>
+    <h1>FAQs about National Parks:</h1>
+    <dl>
+        <dt>
+            How many people visit the national parks?
+        </dt>
+            <dd class="invisible">
+                Total recreation visitors to the national parks in 2016: 330,971,689
+            </dd>
+        <br>
+        <dt>
+            What is the National Park Service budget?
+        </dt>
+            <dd class="invisible">
+                Total recreation visitors to the national parks in 2016: 330,971,689
+            </dd>
+        <br>
+        <dt>
+            How old is the National Park System?
+        </dt>
+            <dd class="invisible">
+                The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916. Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as the nation's first national park.
+            </dd>
+        <br>
+        <dt>
+            How many employees are in the National Park Service?
+        </dt>
+            <dd class="invisible">
+                Permanent, temporary, and seasonal employees: More than 20,000
+            </dd>
+        <br>
+        <dt>
+            How many volunteers are in the National Park Service?
+        </dt>
+            <dd class="invisible">
+                Volunteers: Nearly 340,000 in 2016
+            </dd>
+
+    </dl>
+    </div>
+
+
+    <div>
+        <button>Show Me The Answers!</button>
+    </div>
+</main>
+
+
+
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous">
+</script>
+<script>
+
+    "use strict";
+
+    $(document).ready(function() {
+        $('button').click(function(event) {
+            event.preventDefault();
+            $('dd').toggleClass('invisible');
+        });
+    })
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
