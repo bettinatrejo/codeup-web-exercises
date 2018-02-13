@@ -10,35 +10,22 @@
 
     <style>
 
-        body {
-            background-color: #d0e9c6;
+        h1 {
             text-align: center;
         }
+
+
 
     </style>
 </head>
 <body>
-<h1 class="blue">Konami Code</h1>
-
-<h1 class="pink">Konami Code</h1>
 
 
-<h1 class="green">Konami Code</h1>
-
-
-<h1 class="blue">Konami Code</h1>
-
-<h1 class="pink">Konami Code</h1>
-
-
-<h1 class="purple">Konami Code</h1>
-
-
-<h1 class="red">Konami Code</h1>
+<h1>Welcome!</h1>
 
 
 
-
+<div id="x"><img src="images/sky.jpeg" alt="sky" width=100% ></div>
 
 
 
@@ -51,6 +38,7 @@
 <script>
     "use strict";
 
+
     var keyInput = [];
 
     $(document).keyup(function(e){
@@ -62,64 +50,17 @@
         var newKeyInput = keyInput.toString();
         var konamiCode = "38,38,40,40,37,39,37,39,66,65,13";
 
+        var img = new Image();
+        var div = document.getElementById('x');
         if (newKeyInput === konamiCode){
-            alert("You have added 30 extra lives!!");
+            div.innerHTML += '<img src="images/stars.jpg" width="100%"/>';
+
         }
     });
 
 
     //add .append
 
-
-    $(".pink").hover(
-        function() {
-            $(this).css("background-color", "pink");
-        },
-        function() {
-            $(this).css("background-color", "#d0e9c6");
-        }
-
-    );
-
-    $(".green").hover(
-        function() {
-            $(this).css("background-color", "green");
-        },
-        function() {
-            $(this).css("background-color", "#d0e9c6");
-        }
-    );
-
-
-    $(".blue").hover(
-        function() {
-            $(this).css("background-color", "blue");
-        },
-        function() {
-            $(this).css("background-color", "#d0e9c6");
-        }
-    );
-
-
-    $(".red").hover(
-        function() {
-            $(this).css("background-color", "red");
-        },
-        function() {
-            $(this).css("background-color", "#d0e9c6");
-        }
-
-    );
-
-    $(".purple").hover(
-        function() {
-            $(this).css("background-color", "purple");
-        },
-        function() {
-            $(this).css("background-color", "#d0e9c6");
-        }
-
-    );
 
 
 
