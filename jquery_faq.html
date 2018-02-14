@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FAQs about national parks</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
 
     <style type="text/css">
 
@@ -14,8 +15,16 @@
             display: none;
         }
 
+        .hide {
+            display: none;
+        }
+
+        /*.fade {*/
+            /*display: none;*/
+        /*}*/
 
     </style>
+
 
 </head>
 
@@ -23,6 +32,13 @@
 <body>
 
 <main>
+    <h2>Register for this site!</h2>
+
+    <div class="delete">
+        <h1>Would you like to sign up for our newsletter?</h1>
+        <span>x</span>
+    </div>
+
     <div>
     <h1>FAQs about National Parks:</h1>
     <dl>
@@ -69,8 +85,8 @@
     </div>
 
     <div>
-        <h3 id="national-parks-heading">National Parks</h3>
-        <ul id="national-parks">
+        <h3>National Parks</h3>
+        <ul>
             <li>Arches</li>
             <li>Badlands</li>
             <li>Carlsbad Caverns</li>
@@ -78,7 +94,7 @@
             <li>Everglades</li>
         </ul>
         <h3>State Parks of Texas</h3>
-        <ul id="state-parks-texas">
+        <ul>
             <li>Abilene</li>
             <li>Big Bend</li>
             <li>Choke Canyon</li>
@@ -86,7 +102,7 @@
             <li>Enchanted Rock</li>
         </ul>
         <h3>State Parks of Texas</h3>
-        <ul id="state-parks-texas">
+        <ul>
             <li>Abilene</li>
             <li>Big Bend</li>
             <li>Choke Canyon</li>
@@ -102,13 +118,16 @@
 </main>
 
 
-
-
 <script
         src="https://code.jquery.com/jquery-2.2.4.js"
         integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
         crossorigin="anonymous">
 </script>
+
+<!--<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
 <script>
 
     "use strict";
@@ -142,10 +161,58 @@
             $(this).parent().children().first().css('color', 'blue');
             });
 
-    })
+    });
 
 
 
+
+
+
+
+
+//    When the 'x' is clicked, hide the entire div element.
+
+    $('span').click(function(){
+        $('.delete').hide();
+    });
+
+
+//The uls next to each h3 that contain facts about each park should start out hidden, and when the corresponding h3 is clicked, the display of the ul should be toggled with a sliding effect.
+
+    // $('#park-1').hide();
+    // $('#park-list-1').click(function(){
+    //     $('#park-1').slideToggle({
+    //         duration: 200
+    //     });
+    // });
+    //
+    // $('#park-2').hide();
+    // $('#park-list-2').click(function(){
+    //     $('#park-2').slideToggle({
+    //         duration: 200
+    //     });
+    // });
+    //
+    // $('#park-3').hide();
+    // $('#park-list-3').click(function(){
+    //     $('#park-3').slideToggle({
+    //         duration: 200
+    //     });
+    // });
+
+
+    $('ul').hide();
+    $('h3').click(function() {
+        $(this).next().slideToggle({
+            duration: 200
+        });
+    });
+
+
+
+//    After the user has been on the page for 8 seconds, an h2 should fade in that asks the user to register for the site.
+
+    $('h2').hide().delay(8000).fadeIn();
 
 
 
