@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather</title>
 
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/weather.css">
 
 
@@ -16,22 +16,36 @@
 <body>
 
     <main>
+        <div class="container">
         <h1>Weather Application</h1>
-        <div id="weather"></div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div id="weather"></div>
+                </div>
+            </div>
+            <div>
+                <div id="map"></div>
+            </div>
+        </div>
     </main>
 
 
 
 
 
-
+    <!--jQuery-->
 <script
         src="https://code.jquery.com/jquery-2.2.4.js"
         integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
         crossorigin="anonymous">
 </script>
+    <!--map-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIp5Ig5kgI1P0nWd4BDrTHIAzZVvg6mjA"></script>
+    <!--bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!--use 5 day/daily forecast-->
+
+    <!--use 5 day/daily forecast-->
 <script>
 
 
@@ -74,11 +88,15 @@ updatePage();
 
 
 function buildHTML(input) {
-        var html = "";
+    var html = "";
     for (var i = 4; i < 24; i+= 8) {
-        html += "<hr>";
-        html += "<p>" + input.list[i].main.temp + "</p>";
-        html += ""
+        html += "<h2>" + parseInt(input.list[i].main.temp_min) + "°F" + "/"+ parseInt(input.list[i].main.temp_max) + "°F"+ "</h2>";
+        html += "<p>" + "<img src='http://openweathermap.org/img/w/" + input.list[i].weather[0].icon + ".png'>" + "</p>";
+        html += "<p>" +   input.list[i].weather[0].main +  ": " + input.list[i].weather[0].description + "</p>";
+        html += "<p>" + "Humidity: " + input.list[i].main.humidity +  "</p>";
+        html += "<p>" + "Wind: " + input.list[i].wind.speed +  "</p>";
+        html += "<p>" + "Pressure: " + input.list[i].main.pressure +  "</p>";
+
     }
     $("#weather").html(html);
 }
@@ -89,20 +107,58 @@ function buildHTML(input) {
 
 
 
+//maps
+var mapDisplay = document.getElementById('map');
+
+
+//these have to be defined
+var options = {
+    zoom: 15,
+    center: {
+        lat: 31.9686,
+        lng: -99.9018
+    }
+};
+
+
+var map = new google.maps.Map(mapDisplay, options);
+
+
+//insert function here
+var geocoder = new google.maps.Geocoder();
 
 
 
-//
-//     Array.from(infos).forEach(function (info) {
-//         html += "<hr>";
-//         html += "<h3>" + info.city.name + "</h3>";
-//         html += ""
-//     });
-//
-//     html += "<hr>";
-//     $("#weather").html(html);
-//     console.log(html);
-// }
+
+geocoder.geocode({
+    address: "san antonio"
+}, function(results, status) {
+    if (status === "OK") {
+
+        var marker = new google.maps.Marker({
+            position: results[0].geometry.location,
+            map: map,
+            draggable: true,
+
+
+
+        });
+        map.setCenter(results[0].geometry.location);
+
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

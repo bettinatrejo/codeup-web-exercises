@@ -5,4 +5,7 @@ main {
 #weather {
     background-color: lightgray;
     text-align: center;
+    font-weight: bold;
+    border: 1px solid red;
+
 }
