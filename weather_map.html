@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+
+
+    <link rel="stylesheet" href="css/weather.css">
+
+
+
+</head>
+<body>
+
+    <main>
+        <h1>Weather Application</h1>
+        <div id="weather"></div>
+    </main>
+
+
+
+
+
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous">
+</script>
+
+<!--use 5 day/daily forecast-->
+<script>
+
+
+function updatePage(weather) {
+
+    var request = $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: "5f24466c0d7a3151b3d11aa2dba9c34f",
+        //could potentially do lat/long instead of city (lat: long:)
+        lat:    29.423017,
+        lon:   -98.48527,
+        // q:"San Antonio",
+        //to get degrees in f
+        units: "imperial"
+    });
+
+    request.done(function(weather) {
+        buildHTML(weather);
+    });
+
+
+    request.fail(function (status){
+        console.log(status);
+    });
+}
+updatePage();
+
+
+    // //need to call the function to direct the request where to go
+    // request.done(function(weather){
+    //     console.log(weather);
+    //     //to pull a specific value
+    //     // console.log(weather.main.humidity);
+    // });
+
+
+
+
+
+
+
+
+function buildHTML(input) {
+        var html = "";
+    for (var i = 4; i < 24; i+= 8) {
+        html += "<hr>";
+        html += "<p>" + input.list[i].main.temp + "</p>";
+        html += ""
+    }
+    $("#weather").html(html);
+}
+
+
+
+
+
+
+
+
+
+
+//
+//     Array.from(infos).forEach(function (info) {
+//         html += "<hr>";
+//         html += "<h3>" + info.city.name + "</h3>";
+//         html += ""
+//     });
+//
+//     html += "<hr>";
+//     $("#weather").html(html);
+//     console.log(html);
+// }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
