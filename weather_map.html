@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/weather.css">
 
@@ -16,18 +16,89 @@
 <body>
 
     <main>
-        <div class="container">
-        <h1>Weather Application</h1>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div id="weather"></div>
+
+        <!--NAVIGATION-->
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">KBTX</a>
                 </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">3 Day <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">5 Day</a></li>
+                        <li><a href="#">Weekend</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Info <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Monthly</a></li>
+                                <li><a href="#">Videos</a></li>
+                                <li><a href="#">Local Stories</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="City/Zip Code">
+                        </div>
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </form>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="jumbotron">
+            <h1>Weather Information</h1>
+        </div>
+
+
+
+        <!--content-->
+
+        <div class="container">
+        <h2>3-Day Forecast</h2>
+
+
+            <!--form for lat/long-->
+            <div class="center">
+                    <div>
+                        <label for="lat">Latitude:</label>
+                        <input type="text" name="lat" id="lat">
+
+                        <label for="long">Longitude:</label>
+                        <input type="text" name="long" id="long">
+                        <button id="weatherUpdate">Submit</button>
+                    </div>
             </div>
+
+            <!--weather information-->
+            <div class="row" id="weather"></div>
+
+            <!--map-->
             <div>
                 <div id="map"></div>
             </div>
+
+
+            <span style="display:block; height: 80px;"></span>
         </div>
     </main>
+
+
+
+
+
+
+
 
 
 
@@ -39,27 +110,37 @@
         integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
         crossorigin="anonymous">
 </script>
-    <!--map-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIp5Ig5kgI1P0nWd4BDrTHIAzZVvg6mjA"></script>
     <!--bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <!--map-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIp5Ig5kgI1P0nWd4BDrTHIAzZVvg6mjA"></script>
 
     <!--use 5 day/daily forecast-->
 <script>
 
+var coord = {
+    "newLat":   29.423017,
+    "newLon":  -98.48527
 
-function updatePage(weather) {
+};
 
-    var request = $.get("http://api.openweathermap.org/data/2.5/forecast", {
+
+
+function updatePage() {
+    coord.newLat = $("#lat").val();
+    coord.newLon = $("#long").val();
+
+    var request = $.get("http://api.openweathermap.org/data/2.5/forecast/", {
         APPID: "5f24466c0d7a3151b3d11aa2dba9c34f",
         //could potentially do lat/long instead of city (lat: long:)
-        lat:    29.423017,
-        lon:   -98.48527,
+        lat: coord.newLat,
+        lon: coord.newLon,
+        units: "imperial"
         // q:"San Antonio",
         //to get degrees in f
-        units: "imperial"
     });
+
 
     request.done(function(weather) {
         buildHTML(weather);
@@ -73,34 +154,26 @@ function updatePage(weather) {
 updatePage();
 
 
-    // //need to call the function to direct the request where to go
-    // request.done(function(weather){
-    //     console.log(weather);
-    //     //to pull a specific value
-    //     // console.log(weather.main.humidity);
-    // });
-
-
-
-
-
 
 
 
 function buildHTML(input) {
     var html = "";
+    html += "<h2>" + input.city.name + "</h2>";
     for (var i = 4; i < 24; i+= 8) {
-        html += "<h2>" + parseInt(input.list[i].main.temp_min) + "°F" + "/"+ parseInt(input.list[i].main.temp_max) + "°F"+ "</h2>";
+        html += "<div class=\"col-sm-4 break\">";
+        html += "<h3>" + "Current: " + parseInt(input.list[i].main.temp) + "°F"+ "</h3>";
+        html += "<p>" + parseInt(input.list[i].main.temp_min) + "°F" + "/"+ parseInt(input.list[i].main.temp_max) + "°F"+ "</p>";
         html += "<p>" + "<img src='http://openweathermap.org/img/w/" + input.list[i].weather[0].icon + ".png'>" + "</p>";
         html += "<p>" +   input.list[i].weather[0].main +  ": " + input.list[i].weather[0].description + "</p>";
         html += "<p>" + "Humidity: " + input.list[i].main.humidity +  "</p>";
         html += "<p>" + "Wind: " + input.list[i].wind.speed +  "</p>";
         html += "<p>" + "Pressure: " + input.list[i].main.pressure +  "</p>";
-
+        html += "</div>";
     }
     $("#weather").html(html);
-}
 
+}
 
 
 
@@ -115,8 +188,8 @@ var mapDisplay = document.getElementById('map');
 var options = {
     zoom: 15,
     center: {
-        lat: 31.9686,
-        lng: -99.9018
+        lat: 29.423017,
+        lng: -98.48527
     }
 };
 
@@ -137,16 +210,24 @@ geocoder.geocode({
 
         var marker = new google.maps.Marker({
             position: results[0].geometry.location,
-            map: map,
-            draggable: true,
-
+            map: map
 
 
         });
         map.setCenter(results[0].geometry.location);
 
     }
+
 });
+
+
+
+
+
+$("#weatherUpdate").click(updatePage);
+
+
+
 
 
 

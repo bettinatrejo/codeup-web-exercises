@@ -1,11 +1,53 @@
 main {
-    background-color: #96dbff;
+    background-image: url("https://vignette.wikia.nocookie.net/phobia/images/5/53/Clouds.jpg/revision/latest?cb=20170123161554");
 }
 
 #weather {
     background-color: lightgray;
     text-align: center;
     font-weight: bold;
-    border: 1px solid red;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 3%;
+    margin-bottom: 5%;
 
+
+
+
+}
+
+.jumbotron {
+    text-align: center;
+    font-family: 'Passion One', cursive;
+    height: 30%;
+    padding: .5%;
+
+}
+
+.navbar {
+    background-color: #3a0400;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+
+}
+
+.break {
+    border: 3px solid black;
+
+}
+
+.center {
+    margin-left: 23%
 }
