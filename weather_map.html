@@ -159,8 +159,9 @@ updatePage();
 function buildHTML(input) {
     var html = "";
     html += "<h2>" + input.city.name + "</h2>";
-    for (var i = 4; i < 24; i+= 8) {
+    for (var i = 6; i < 23; i+= 8) {
         html += "<div class=\"col-sm-4 break\">";
+        html += "<p id='date'>" + input.list[i].dt_txt + "</p>";
         html += "<h3>" + "Current: " + parseInt(input.list[i].main.temp) + "°F"+ "</h3>";
         html += "<p>" + parseInt(input.list[i].main.temp_min) + "°F" + "/"+ parseInt(input.list[i].main.temp_max) + "°F"+ "</p>";
         html += "<p>" + "<img src='http://openweathermap.org/img/w/" + input.list[i].weather[0].icon + ".png'>" + "</p>";
