@@ -93,7 +93,7 @@ users.forEach(function(user) {
 //
 
 //new way
-developers.push(`${name} '\'s email is' ${email} ${name} ' knows ' ${languages}.join(', ')`)});
+developers.push(`${name}'s email is ${email} ${name} knows ${languages}`)});
 
 
 
@@ -115,4 +115,4 @@ for (let developer of developers){
 list += '</ul>';
 
 
-console.log(list);
+document.getElementsByTagName('body')[0].innerHTML = list;
