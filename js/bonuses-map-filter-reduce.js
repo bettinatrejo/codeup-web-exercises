@@ -28,12 +28,22 @@ let firstLetters = fruits.map(fruit => fruit.charAt(0));
 console.log(firstLetters);
 
 
+
+
+
+
+
 // PROBLEM 2 - create array of user objects based on the customers array
 // of objects (each user object should just have name and age properties)(use .map())
 
 
-let properties = customers.map( );
+let properties = customers.map(customer => {
+    return {name: customer.name, age: customer.age}});
 console.log(properties);
+
+
+
+
 
 
 
@@ -41,6 +51,18 @@ console.log(properties);
 // containing the same properties as the objects on the customers objects(use .filter())
 
 
+let civilArray = customers.filter(function(customer) {
+    return customer.occupation === "Teacher" || customer.occupation === "Police Officer";
+    });
+console.log(civilArray);
+
+
+
+
+
 // PROBLEM 4 - determine the average age of customers(use .reduce())
 
-
+let average = customers.reduce((total, customer) => {
+    return total + customer.age / customers.length;
+},0);
+console.log(average);
