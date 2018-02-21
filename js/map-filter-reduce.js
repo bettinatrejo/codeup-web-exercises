@@ -58,15 +58,12 @@ console.log(emails);
 // console.log(arrObject);
 
 
-const arrayToObject = (array) =>
-    users.reduce((obj, item) => {
-        obj[item.id] = item;
-        return obj
+const arrayToObject = users.reduce((accum, user) => {
+        accum[user.id] = user;
+        return accum;
     }, {});
 
-
-const peopleObject = arrayToObject(users);
-console.log(peopleObject);
+console.log(arrayToObject);
 
 
 //another way to do it
@@ -74,3 +71,4 @@ console.log(peopleObject);
 //     let {id, name, email, languages} = user;
 //     accum[id] = {name, email, languages};
 // }, {});
+
